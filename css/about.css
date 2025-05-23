@@ -1,0 +1,67 @@
+/* 
+* About Section Styles
+* Author: Suraj Gardi
+*/
+
+.about-content {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition), background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-content:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+
+.about-content h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: var(--dark-color);
+  font-family: var(--font-secondary);
+}
+
+.about-content h3::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary-color);
+  bottom: -8px;
+  left: 0;
+}
+
+.about-info {
+  margin: 25px 0;
+  background-color: var(--bg-light);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item {
+  margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.info-title {
+  font-weight: 600;
+  color: var(--dark-color);
+  min-width: 100px;
+  transition: color 0.3s ease;
+}
+
+.info-value {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.info-value.available {
+  color: var(--success-color);
+  font-weight: 600;
+}

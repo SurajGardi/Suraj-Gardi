@@ -1,0 +1,123 @@
+/* 
+* Blogs Section Styles
+* Author: Suraj Gardi
+*/
+
+.blog-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition), background-color 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--hover-shadow);
+}
+
+.blog-image {
+  position: relative;
+  overflow: hidden;
+  height: 180px;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.blog-card:hover .blog-image img {
+  transform: scale(1.05);
+}
+
+.blog-date {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color-dark) 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-date span {
+  display: block;
+  font-weight: 600;
+}
+
+.blog-date span:first-child {
+  font-size: 18px;
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-meta {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.blog-meta span {
+  font-size: 13px;
+  color: var(--text-color);
+}
+
+.blog-meta span i {
+  margin-right: 4px;
+  color: var(--primary-color);
+}
+
+.blog-content h4 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: var(--dark-color);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.blog-content p {
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.read-more {
+  font-weight: 600;
+  color: var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.read-more::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  bottom: 0;
+  left: 0;
+  transition: var(--transition);
+}
+
+.read-more:hover::after {
+  width: 100%;
+}
+
+.read-more i {
+  margin-left: 4px;
+  transition: var(--transition);
+}
+
+.read-more:hover i {
+  transform: translateX(4px);
+}

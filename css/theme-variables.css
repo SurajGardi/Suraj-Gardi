@@ -1,0 +1,111 @@
+/* 
+* Theme Variables and Global Styles
+* Author: Suraj Gardi
+*/
+
+:root {
+  --primary-color: #0563bb;
+  --primary-color-light: rgba(5, 99, 187, 0.1);
+  --primary-color-dark: #045299;
+  --secondary-color: #6c757d;
+  --dark-color: #2d4a8a;
+  --text-color: #4e4e4e;
+  --light-color: #f8f9fa;
+  --bg-color: #ffffff;
+  --bg-light: #f5f8fd;
+  --card-bg: #ffffff;
+  --border-color: #e9ecef;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Playfair Display", serif;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --card-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  --hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  --border-radius: 10px;
+}
+
+/* Dark Theme Colors */
+.dark-mode {
+  --primary-color: #4da8ff;
+  --primary-color-light: rgba(77, 168, 255, 0.1);
+  --primary-color-dark: #2d8fe0;
+  --secondary-color: #a0aec0;
+  --dark-color: #e2e8f0;
+  --text-color: #cbd5e0;
+  --light-color: #2d3748;
+  --bg-color: #1a202c;
+  --bg-light: #2d3748;
+  --card-bg: #2d3748;
+  --border-color: #4a5568;
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --card-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  --hover-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  color: var(--text-color);
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding-top: 80px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--dark-color);
+  transition: color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-color-dark);
+  text-decoration: none;
+}
+
+p {
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--dark-color);
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.bg-light {
+  background-color: var(--bg-light) !important;
+  transition: background-color 0.3s ease;
+}

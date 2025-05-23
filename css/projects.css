@@ -1,0 +1,157 @@
+/* 
+* Projects Section Styles
+* Author: Suraj Gardi
+*/
+
+.project-filter {
+  margin-bottom: 25px;
+}
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-list li {
+  padding: 6px 18px;
+  background-color: var(--card-bg);
+  border-radius: 25px;
+  font-weight: 600;
+  color: var(--dark-color);
+  cursor: pointer;
+  transition: var(--transition), background-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.filter-list li:hover,
+.filter-list li.active {
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 12px rgba(5, 99, 187, 0.2);
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition), background-color 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--hover-shadow);
+}
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(5, 99, 187, 0.9) 0%, rgba(4, 82, 153, 0.9) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  transform: translateY(15px);
+  opacity: 0;
+  transition: all 0.4s ease 0.1s;
+}
+
+.project-card:hover .project-links {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--card-bg);
+  border-radius: 50%;
+  color: var(--primary-color);
+  font-size: 16px;
+  transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-link:hover {
+  background-color: var(--primary-color-dark);
+  color: white;
+  transform: translateY(-3px) rotate(360deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+.project-content p {
+  margin-bottom: 12px;
+  color: var(--text-color);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-tags span {
+  background-color: var(--primary-color-light);
+  padding: 4px 12px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.project-tags span:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}

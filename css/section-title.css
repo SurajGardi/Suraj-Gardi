@@ -1,0 +1,115 @@
+/* 
+* Section Title and Button Styles
+* Author: Suraj Gardi
+*/
+
+.section-title {
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.section-title .subtitle {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: var(--primary-color-light);
+  border-radius: 4px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: var(--dark-color);
+  font-weight: 700;
+  font-family: var(--font-secondary);
+}
+
+.line {
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: 0 auto;
+  position: relative;
+}
+
+.line::before,
+.line::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  top: -2.5px;
+}
+
+.line::before {
+  left: -12px;
+}
+
+.line::after {
+  right: -12px;
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color-dark) 100%);
+  border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: linear-gradient(135deg, var(--primary-color-dark) 0%, var(--primary-color) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(5, 99, 187, 0.3);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  background: transparent;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color-dark) 100%);
+  color: white;
+  border-color: transparent;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(5, 99, 187, 0.3);
+}
