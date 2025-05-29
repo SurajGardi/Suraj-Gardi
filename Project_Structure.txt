@@ -1,0 +1,20 @@
+Suraj-Gardi/
+├── index.html
+├── main.js
+├── README.md
+├── css/
+│   ├── theme-variables.css
+│   ├── preloader.css
+│   ├── navbar.css
+│   ├── section-title.css
+│   ├── hero.css
+│   ├── about.css
+│   ├── skills.css
+│   ├── projects.css
+│   ├── resume.css
+│   ├── blogs.css
+│   ├── contact.css
+│   ├── footer.css
+│   ├── back-to-top.css
+│   ├── responsive.css
+├── assets/ (or img/, for images)
