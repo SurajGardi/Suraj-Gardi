@@ -1,7 +1,12 @@
-/* 
-* Blogs Section Styles
-* Author: Suraj Gardi
-*/
+/* Blogs Section Styles */
+/* Author: Suraj Gardi */
+
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  justify-content: center;
+}
 
 .blog-card {
   background-color: var(--card-bg);
@@ -10,6 +15,8 @@
   box-shadow: var(--card-shadow);
   transition: var(--transition), background-color 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-card:hover {
@@ -58,6 +65,9 @@
 
 .blog-content {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .blog-meta {
@@ -87,6 +97,7 @@
 .blog-content p {
   margin-bottom: 15px;
   color: var(--text-color);
+  flex-grow: 1;
 }
 
 .read-more {
