@@ -96,7 +96,7 @@
           <h1>Hi, I'm <span class="highlight">Suraj Gardi</span></h1>
           <h2>I am a <span class="typed-text">Full Stack Developer</span><span class="cursor">&nbsp;</span></h2>
           <p>
-            I design and develop experiences that make people's lives simple through Web and Desktop apps. I work with C, C++, Java, Python, HTML5, CSS3 and JavaScript.
+            I design and develop experiences that make people's lives simple through Web and Desktop apps. I work with C, C++, Java, Spring Boot, Python, HTML5, CSS3 and JavaScript.
           </p>
           <div class="hero-buttons">
             <a href="#contact" class="btn btn-primary me-3">Hire Me</a>
@@ -186,7 +186,7 @@
                         <h3 class="mb-4">Technical Skills</h3>
                         <div class="skill-item">
                             <div class="skill-info">
-                                <p>C / C++</p>
+                                <p>C, C++</p>
                                 <p>85%</p>
                             </div>
                             <div class="progress">
@@ -215,7 +215,7 @@
 
                         <div class="skill-item">
                             <div class="skill-info">
-                                <p>HTML/CSS/JavaScript</p>
+                                <p>HTML, CSS, JavaScript</p>
                                 <p>95%</p>
                             </div>
                             <div class="progress">
@@ -490,75 +490,77 @@
     </section>
 
     <!-- Blogs Section -->
-    <section id="blogs" class="section-padding">
-        <div class="container">
-            <div class="section-title text-center mb-5" data-aos="fade-up">
-                <h2>Latest Articles</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="blog-card">
-                        <div class="blog-image">
-                            <img src="images/blog1.png" alt="Blog 1" class="img-fluid">
-                            <div class="blog-date">
-                                <span>17</span>
-                                <span>May</span>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fas fa-user"></i> Suraj Gardi</span>
-                                <!-- <span><i class="fas fa-folder"></i> Web Development</span> -->
-                            </div>
-                            <h4>My Journey Through the LeetCode 100 Days Challenge..!</h4>
-                            <p>`In this blog, I share how I completed the 100 Days of LeetCode Challenge to improve my DSA skills, tracking progress on GitHub and LinkedIn while building a daily coding habit.</p>
-                            <a href="https://leetcode100.hashnode.dev/my-journey-through-the-leetcode-100-days-challenge-how-i-prepare-solve-and-track-progress-on-github-and-linkedin" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="blog-card">
-                        <div class="blog-image">
-                            <img src="images/blog2.png" alt="Blog 2" class="img-fluid">
-                            <div class="blog-date">
-                                <span>27</span>
-                                <span>May</span>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fas fa-user"></i> Suraj Gardi</span>
-                                <span><i class="fas fa-folder"></i> Computer Architecture</span>
-                            </div>
-                            <h4>Understanding the x86 Toolchain</h4>
-                            <p>In this blog, I break down the x86 toolchain process—from writing code to running the final executable—to help readers understand how compilation, assembly, and linking work together behind the scenes.</p>
-                            <a href="https://x86-toolchain.hashnode.dev/understanding-the-x86-toolchain-from-code-to-execution" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="blog-card">
-                        <div class="blog-image">
-                            <img src="images/blog3.jpg" alt="Blog 3" class="img-fluid">
-                            <div class="blog-date">
-                                <span>05</span>
-                                <span>May</span>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <span><i class="fas fa-user"></i> Suraj Gardi</span>
-                                <span><i class="fas fa-folder"></i> UI/UX</span>
-                            </div>
-                            <h4>UI/UX Design Principles for Web Developers</h4>
-                            <p>Discover essential design principles that every web developer should understand...</p>
-                            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
+<section id="blogs" class="section-padding">
+  <div class="container">
+    <div class="section-title text-center mb-5" data-aos="fade-up">
+      <h2>Latest Articles</h2>
+    </div>
+
+    <div class="blogs-grid">
+      <!-- Blog 1 -->
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="blog-image">
+          <img src="images/blog1.png" alt="Blog 1" class="img-fluid">
+          <div class="blog-date">
+            <span>17</span>
+            <span>May</span>
+          </div>
         </div>
-    </section>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span><i class="fas fa-user"></i> Suraj Gardi</span>
+          </div>
+          <h4>My Journey Through the LeetCode 100 Days Challenge..!</h4>
+          <p>In this blog, I share how I completed the 100 Days of LeetCode Challenge to improve my DSA skills, tracking progress on GitHub and LinkedIn while building a daily coding habit.</p>
+          <a href="https://leetcode100.hashnode.dev/my-journey-through-the-leetcode-100-days-challenge-how-i-prepare-solve-and-track-progress-on-github-and-linkedin" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Blog 2 -->
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="blog-image">
+          <img src="images/blog2.png" alt="Blog 2" class="img-fluid">
+          <div class="blog-date">
+            <span>27</span>
+            <span>May</span>
+          </div>
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span><i class="fas fa-user"></i> Suraj Gardi</span>
+            <span><i class="fas fa-folder"></i> Computer Architecture</span>
+          </div>
+          <h4>Understanding the x86 Toolchain</h4>
+          <p>In this blog, I break down the x86 toolchain process—from writing code to running the final executable—to help readers understand how compilation, assembly, and linking work together behind the scenes.</p>
+          <a href="https://x86-toolchain.hashnode.dev/understanding-the-x86-toolchain-from-code-to-execution" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Optional: Blog 3 -->
+      <!--
+      <div class="blog-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="blog-image">
+          <img src="images/blog3.jpg" alt="Blog 3" class="img-fluid">
+          <div class="blog-date">
+            <span>05</span>
+            <span>May</span>
+          </div>
+        </div>
+        <div class="blog-content">
+          <div class="blog-meta">
+            <span><i class="fas fa-user"></i> Suraj Gardi</span>
+            <span><i class="fas fa-folder"></i> UI/UX</span>
+          </div>
+          <h4>UI/UX Design Principles for Web Developers</h4>
+          <p>Discover essential design principles that every web developer should understand to create intuitive, user-friendly web experiences.</p>
+          <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="section-padding bg-light">
