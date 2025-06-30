@@ -132,16 +132,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Typed.js for hero section
-  const typed = document.querySelector(".typed-text")
-  if (typed) {
-    new Typed(".typed-text", {
-      strings: ["Developer", "Coder"],
-      typeSpeed: 50,
-      backSpeed: 30,
-      backDelay: 2000,
-      loop: true,
-    })
-  }
+const typed = document.querySelector(".typed-text");
+
+if (typed) {
+  new Typed(".typed-text", {
+    strings: ["Developer", "Programmer"],
+    typeSpeed: 60,       // Slower typing speed
+    backSpeed: 40,       // Smooth backspacing
+    backDelay: 2500,     // Pause before deleting
+    startDelay: 500,     // Initial delay for better appearance
+    loop: true,
+    showCursor: true,
+    cursorChar: "|",     // You can change cursor style if you want
+  });
+}
+
 
   // Circle Progress for skills
   $(".skill-circle").each(function () {
