@@ -120,3 +120,8 @@ textarea.form-control {
   height: auto;
   min-height: 120px;
 }
+
+#form-message {
+  font-size: 15px;
+  transition: opacity 0.5s ease-in-out;
+}
