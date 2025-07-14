@@ -243,22 +243,45 @@ if (typed) {
   })
 
   // Form submission
-  const contactForm = document.getElementById("contactForm")
-  const formMessage = document.getElementById("form-message")
+  
+  const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("form-message");
 
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault()
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-      // Simulate form submission
-      formMessage.innerHTML = '<div class="alert alert-success">Your message has been sent. Thank you!</div>'
-      contactForm.reset()
+    const data = new FormData(contactForm);
 
+    fetch(contactForm.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        formMessage.textContent = "✅ Your message has been sent successfully!";
+        formMessage.style.color = "green";
+        contactForm.reset();
+      } else {
+        formMessage.textContent = "❌ Oops! Something went wrong.";
+        formMessage.style.color = "red";
+      }
+    }).catch(error => {
+      formMessage.textContent = "❌ Network error. Please try again later.";
+      formMessage.style.color = "red";
+    }).finally(() => {
+      formMessage.style.opacity = 1;
       setTimeout(() => {
-        formMessage.innerHTML = ""
-      }, 5000)
-    })
-  }
+        formMessage.style.opacity = 0;
+        formMessage.textContent = "";
+      }, 10000); // 10 seconds
+    });
+  });
+}
+
+
 
   // Dark mode toggle
   const themeToggle = document.getElementById("theme-toggle")
