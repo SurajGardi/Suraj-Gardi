@@ -244,12 +244,26 @@ if (typed) {
 
   // Form submission
   
-  const contactForm = document.getElementById("contactForm");
+const contactForm = document.getElementById("contactForm");
 const formMessage = document.getElementById("form-message");
+
+function isValidEmail(email) {
+  // Basic but solid email regex pattern
+  const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return pattern.test(email);
+}
 
 if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
+
+    const emailInput = document.getElementById("email").value.trim();
+
+    if (!isValidEmail(emailInput)) {
+      formMessage.textContent = "❌ Please enter a valid email address.";
+      formMessage.style.color = "red";
+      return;
+    }
 
     const data = new FormData(contactForm);
 
