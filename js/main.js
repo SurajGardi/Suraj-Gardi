@@ -279,7 +279,8 @@ if (contactForm) {
         formMessage.style.color = "green";
         contactForm.reset();
       } else {
-        formMessage.textContent = "❌ Oops! Something went wrong.";
+        // formMessage.textContent = "❌ Oops! Something went wrong.";
+        formMessage.textContent = "⚠️ Contact form is temporarily unavailable. Please reach out via LinkedIn or email directly.";
         formMessage.style.color = "red";
       }
     }).catch(error => {
